@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "120263891380",
+    "firebase_url": "https://thizer-class.firebaseio.com",
+    "project_id": "thizer-class",
+    "storage_bucket": "thizer-class.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120263891380:android:5f88ef9856157a46943ae1",
+        "android_client_info": {
+          "package_name": "com.thizer.barber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120263891380-al9jf6bdfrjuob4mamtn915c3gqljpb9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thizer.barber",
+            "certificate_hash": "4de8bc2afe31b8f1290c84b9c4fb09f3be70e26a"
+          }
+        },
+        {
+          "client_id": "120263891380-7qu0vfo1iqiuvcv123iramhvq38agv39.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdfQjRinsIWYWsszoQ5dlT4TdxbXnkRzM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120263891380-7qu0vfo1iqiuvcv123iramhvq38agv39.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
