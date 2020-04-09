@@ -1,17 +1,78 @@
 import 'package:flutter/material.dart';
+import 'package:getflutter/getflutter.dart';
 
 class Layout {
-
   static Scaffold render(Widget content, String title) {
     return Scaffold(
-      appBar: AppBar(
+      drawer: Layout.getDrawer(),
+      appBar: GFAppBar(
+        // leading: GFIconButton(
+        //   icon: Icon(
+        //     Icons.arrow_back_ios,
+        //     color: Colors.white,
+        //   ),
+        //   onPressed: () {},
+        //   type: GFButtonType.transparent,
+        // ),
         title: Text(title),
+        searchBar: true,
+        actions: <Widget>[
+          GFIconButton(
+            icon: Icon(
+              Icons.more_vert,
+              color: Colors.white,
+            ),
+            onPressed: () {},
+            type: GFButtonType.solid,
+          ),
+        ],
       ),
       body: content,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {},
+      //   tooltip: 'Increment',
+      //   child: Icon(Icons.add),
+      // ),
+    );
+  }
+
+  static getDrawer() {
+    return GFDrawer(
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: <Widget>[
+          GFDrawerHeader(
+            currentAccountPicture: GFAvatar(
+              radius: 80.0,
+              backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2017/12/03/18/04/christmas-balls-2995437_960_720.jpg"),
+            ),
+            otherAccountsPictures: <Widget>[
+              Image(
+                image: NetworkImage("https://cdn.pixabay.com/photo/2019/12/20/00/03/road-4707345_960_720.jpg"),
+                fit: BoxFit.cover,
+              ),
+              GFAvatar(
+                child: Text("ab"),
+              )
+            ],
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text('user name', style: TextStyle(color: Colors.white)),
+                Text('user@userid.com', style: TextStyle(color: Colors.white)),
+              ],
+            ),
+          ),
+          ListTile(
+            title: Text('Item 1'),
+            onTap: null,
+          ),
+          ListTile(
+            title: Text('Item 2'),
+            onTap: null,
+          ),
+        ],
       ),
     );
   }
