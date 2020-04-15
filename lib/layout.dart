@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:getflutter/getflutter.dart';
 
 class Layout {
-  static Scaffold render(Widget content, String title) {
+  static Scaffold render(Widget content, String title, {Widget floatingActionButton}) {
     return Scaffold(
       drawer: Layout.getDrawer(),
       appBar: GFAppBar(
@@ -14,6 +14,7 @@ class Layout {
         //   onPressed: () {},
         //   type: GFButtonType.transparent,
         // ),
+        centerTitle: true,
         title: Text(title),
         searchBar: true,
         actions: <Widget>[
@@ -28,11 +29,9 @@ class Layout {
         ],
       ),
       body: content,
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {},
-      //   tooltip: 'Increment',
-      //   child: Icon(Icons.add),
-      // ),
+      backgroundColor: Colors.grey[200],
+      // backgroundColor: Colors.black12.withAlpha(50),
+      floatingActionButton: floatingActionButton,
     );
   }
 
